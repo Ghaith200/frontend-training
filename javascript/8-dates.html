@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <script>
+        try {
+    specificDate = new Date(prompt("enter date")); 
+    const options = {
+        weekday: 'long',   // Full day name (e.g., Monday)
+        year: 'numeric',   // Full year (e.g., 2023)
+        month: 'long',     // Full month name (e.g., August)
+        day: 'numeric'     // Day of the month (e.g., 31)
+    };
+    dayName = specificDate.toLocaleDateString('en-US', options);
+    if (dayName == "Invalid Date") throw new Error()
+    console.log("The day on: ", specificDate, " is: ", dayName);
+} catch (error) {
+    alert(`Invalid Date ${error}`)
+}
+    </script>
+</body>
+</html>

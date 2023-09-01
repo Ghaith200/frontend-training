@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>'e' Character Counter</title>
+  </head>
+  <body>
+    <script>
+      s = prompt("Enter string").toString();
+      sum = 0;
+      Array.from(s).forEach((e) => {
+        if (e == "e" || e == "E") sum += 1;
+      });
+      alert(sum);
+    </script>
+  </body>
+</html>

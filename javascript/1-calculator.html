@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #result {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script>
+      let num1 = parseFloat(prompt("Enter the first number:"));
+      let num2 = parseFloat(prompt("Enter the second number:"));
+      while (true) {
+        if (isNaN(num1) || isNaN(num2)) {
+          alert("please enter valid number ");
+          num1 = parseFloat(prompt("Enter the first number:"));
+          num2 = parseFloat(prompt("Enter the second number:"));
+        } else {
+          break;
+        }
+      }
+      let operation = prompt("Enter the operation (+, -, *, /):");
+      let result;
+      x = "true";
+      while (x == "true") {
+        switch (operation) {
+          case "+":
+            result = num1 + num2;
+            x = "break";
+            break;
+          case "-":
+            result = num1 - num2;
+            x = "break";
+            break;
+          case "*":
+      9      result = num1 * num2;
+            x = "break";
+            break;
+          case "/":
+            result = num1 / num2;
+            x = "break";
+            break;
+          default:
+            alert("please enter a valid operation");
+            operation = prompt("Enter the operation (+, -, *, /):");
+        }
+      }
+      let resultElement = document.getElementById("result");
+      resultElement.textContent = `Result of (${num1} ${operation} ${num2}) = ${result}`;
+    </script>
+  </body>
+</html>

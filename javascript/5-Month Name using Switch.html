@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <script>
+        window.onload = function () {
+          const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ];
+    
+          let monthNumber = parseInt(prompt("Enter a number from 1 to 12:"));
+          let outputElement = document.getElementById("output");
+    
+          if (monthNumber >= 1 && monthNumber <= 12) {
+            let monthName = monthNames[monthNumber - 1];
+            outputElement.textContent = `Yaaaaay we are in ${monthName} ✌️`;
+          } else {
+            alert("Invalid number. Please enter a number between 1 and 12.");
+          }
+        };
+      </script>
+    </head>
+    <body>
+      <p id="output"></p>
+    </body>
+    </html>
+    
+</body>
+</html>
